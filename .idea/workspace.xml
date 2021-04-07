@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="326ab6ae-8a69-4bf5-b94b-b09551f52d4a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/Podfile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/src/main/java/com/ruikang/emh_scan/EmhScanPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/ruikang/emh_scan/EmhScanPlugin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Runner.xcworkspace/contents.xcworkspacedata" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Runner.xcworkspace/contents.xcworkspacedata" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,25 +60,29 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="2037" height="406" key="GridCell.Tab.0.bottom" timestamp="1617698290363">
+    <state width="2037" height="406" key="GridCell.Tab.0.bottom" timestamp="1617785328257">
       <screen x="1440" y="25" width="2560" height="1415" />
     </state>
     <state width="2037" height="406" key="GridCell.Tab.0.bottom/0.25.1440.796/1440.25.2560.1415@1440.25.2560.1415" timestamp="1617698290363" />
+    <state width="2037" height="406" key="GridCell.Tab.0.bottom/0.25.1440.798/1440.25.2560.1415@1440.25.2560.1415" timestamp="1617785328257" />
     <state width="2037" height="406" key="GridCell.Tab.0.bottom/0.25.1440.803/1440.25.2560.1415@1440.25.2560.1415" timestamp="1615194654428" />
-    <state width="2037" height="406" key="GridCell.Tab.0.center" timestamp="1617698290363">
+    <state width="2037" height="406" key="GridCell.Tab.0.center" timestamp="1617785328255">
       <screen x="1440" y="25" width="2560" height="1415" />
     </state>
     <state width="2037" height="406" key="GridCell.Tab.0.center/0.25.1440.796/1440.25.2560.1415@1440.25.2560.1415" timestamp="1617698290363" />
+    <state width="2037" height="406" key="GridCell.Tab.0.center/0.25.1440.798/1440.25.2560.1415@1440.25.2560.1415" timestamp="1617785328255" />
     <state width="2037" height="406" key="GridCell.Tab.0.center/0.25.1440.803/1440.25.2560.1415@1440.25.2560.1415" timestamp="1615194654428" />
-    <state width="2037" height="406" key="GridCell.Tab.0.left" timestamp="1617698290362">
+    <state width="2037" height="406" key="GridCell.Tab.0.left" timestamp="1617785328254">
       <screen x="1440" y="25" width="2560" height="1415" />
     </state>
     <state width="2037" height="406" key="GridCell.Tab.0.left/0.25.1440.796/1440.25.2560.1415@1440.25.2560.1415" timestamp="1617698290362" />
+    <state width="2037" height="406" key="GridCell.Tab.0.left/0.25.1440.798/1440.25.2560.1415@1440.25.2560.1415" timestamp="1617785328254" />
     <state width="2037" height="406" key="GridCell.Tab.0.left/0.25.1440.803/1440.25.2560.1415@1440.25.2560.1415" timestamp="1615194654427" />
-    <state width="2037" height="406" key="GridCell.Tab.0.right" timestamp="1617698290363">
+    <state width="2037" height="406" key="GridCell.Tab.0.right" timestamp="1617785328256">
       <screen x="1440" y="25" width="2560" height="1415" />
     </state>
     <state width="2037" height="406" key="GridCell.Tab.0.right/0.25.1440.796/1440.25.2560.1415@1440.25.2560.1415" timestamp="1617698290363" />
+    <state width="2037" height="406" key="GridCell.Tab.0.right/0.25.1440.798/1440.25.2560.1415@1440.25.2560.1415" timestamp="1617785328256" />
     <state width="2037" height="406" key="GridCell.Tab.0.right/0.25.1440.803/1440.25.2560.1415@1440.25.2560.1415" timestamp="1615194654428" />
     <state x="2078" y="368" key="SettingsEditor" timestamp="1615194161135">
       <screen x="1440" y="25" width="2560" height="1415" />

@@ -1,0 +1,22 @@
+PODS:
+  - emh_scan (0.0.1):
+    - Flutter
+  - Flutter (1.0.0)
+
+DEPENDENCIES:
+  - emh_scan (from `.symlinks/plugins/emh_scan/ios`)
+  - Flutter (from `Flutter`)
+
+EXTERNAL SOURCES:
+  emh_scan:
+    :path: ".symlinks/plugins/emh_scan/ios"
+  Flutter:
+    :path: Flutter
+
+SPEC CHECKSUMS:
+  emh_scan: b10cea7c517763163aae960039617e2ddf86b794
+  Flutter: 434fef37c0980e73bb6479ef766c45957d4b510c
+
+PODFILE CHECKSUM: aafe91acc616949ddb318b77800a7f51bffa2a4c
+
+COCOAPODS: 1.10.1
