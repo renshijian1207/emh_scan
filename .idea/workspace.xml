@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="326ab6ae-8a69-4bf5-b94b-b09551f52d4a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.dart_tool/package_config_subset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.dart_tool/version" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/.packages" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/ruikang/emh_scan/EmhScanPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/ruikang/emh_scan/EmhScanPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,9 +58,33 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state width="2037" height="406" key="GridCell.Tab.0.bottom" timestamp="1617698290363">
+      <screen x="1440" y="25" width="2560" height="1415" />
+    </state>
+    <state width="2037" height="406" key="GridCell.Tab.0.bottom/0.25.1440.796/1440.25.2560.1415@1440.25.2560.1415" timestamp="1617698290363" />
+    <state width="2037" height="406" key="GridCell.Tab.0.bottom/0.25.1440.803/1440.25.2560.1415@1440.25.2560.1415" timestamp="1615194654428" />
+    <state width="2037" height="406" key="GridCell.Tab.0.center" timestamp="1617698290363">
+      <screen x="1440" y="25" width="2560" height="1415" />
+    </state>
+    <state width="2037" height="406" key="GridCell.Tab.0.center/0.25.1440.796/1440.25.2560.1415@1440.25.2560.1415" timestamp="1617698290363" />
+    <state width="2037" height="406" key="GridCell.Tab.0.center/0.25.1440.803/1440.25.2560.1415@1440.25.2560.1415" timestamp="1615194654428" />
+    <state width="2037" height="406" key="GridCell.Tab.0.left" timestamp="1617698290362">
+      <screen x="1440" y="25" width="2560" height="1415" />
+    </state>
+    <state width="2037" height="406" key="GridCell.Tab.0.left/0.25.1440.796/1440.25.2560.1415@1440.25.2560.1415" timestamp="1617698290362" />
+    <state width="2037" height="406" key="GridCell.Tab.0.left/0.25.1440.803/1440.25.2560.1415@1440.25.2560.1415" timestamp="1615194654427" />
+    <state width="2037" height="406" key="GridCell.Tab.0.right" timestamp="1617698290363">
+      <screen x="1440" y="25" width="2560" height="1415" />
+    </state>
+    <state width="2037" height="406" key="GridCell.Tab.0.right/0.25.1440.796/1440.25.2560.1415@1440.25.2560.1415" timestamp="1617698290363" />
+    <state width="2037" height="406" key="GridCell.Tab.0.right/0.25.1440.803/1440.25.2560.1415@1440.25.2560.1415" timestamp="1615194654428" />
     <state x="2078" y="368" key="SettingsEditor" timestamp="1615194161135">
       <screen x="1440" y="25" width="2560" height="1415" />
     </state>
     <state x="2078" y="368" key="SettingsEditor/0.25.1440.803/1440.25.2560.1415@1440.25.2560.1415" timestamp="1615194161135" />
+    <state x="2713" y="487" width="615" height="490" key="find.popup" timestamp="1617694941673">
+      <screen x="1440" y="25" width="2560" height="1415" />
+    </state>
+    <state x="2713" y="487" width="615" height="490" key="find.popup/0.25.1440.796/1440.25.2560.1415@1440.25.2560.1415" timestamp="1617694941673" />
   </component>
 </project>

@@ -18,12 +18,18 @@ class _MyAppState extends State<MyApp> {
 
   static const EventChannel _eventChannel = EventChannel('emh_flutter');
 
+  static const EventChannel _jy_eventChannel = EventChannel('jy_flutter');
+
   @override
   void initState() {
     super.initState();
 
     _eventChannel.receiveBroadcastStream().listen((value) {
       print("获取到扫描头数据>>>>>>>>>>$value");
+    });
+
+    _jy_eventChannel.receiveBroadcastStream().listen((value) {
+      print("获取到京颐数据>>>>>>>>>>$value");
     });
   }
 
