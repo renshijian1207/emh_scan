@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="326ab6ae-8a69-4bf5-b94b-b09551f52d4a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/emh_scan.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/emh_scan.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/ruikang/emh_scan/EmhScanPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/ruikang/emh_scan/EmhScanPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,10 +101,11 @@
       <screen x="0" y="25" width="1440" height="798" />
     </state>
     <state x="0" y="35" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.25.1440.798/1440.25.2560.1415@0.25.1440.798" timestamp="1617846170051" />
-    <state x="406" y="270" width="601" height="490" key="find.popup" timestamp="1617846252523">
-      <screen x="0" y="25" width="1440" height="798" />
+    <state x="2775" y="296" width="1069" height="869" key="find.popup" timestamp="1617852503044">
+      <screen x="1440" y="25" width="2560" height="1415" />
     </state>
     <state x="2713" y="487" width="615" height="490" key="find.popup/0.25.1440.796/1440.25.2560.1415@1440.25.2560.1415" timestamp="1617694941673" />
     <state x="406" y="270" width="601" height="490" key="find.popup/0.25.1440.798/1440.25.2560.1415@0.25.1440.798" timestamp="1617846252523" />
+    <state x="2775" y="296" width="1069" height="869" key="find.popup/0.25.1440.798/1440.25.2560.1415@1440.25.2560.1415" timestamp="1617852503044" />
   </component>
 </project>
