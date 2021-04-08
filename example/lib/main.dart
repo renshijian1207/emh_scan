@@ -3,6 +3,7 @@ import 'dart:async';
 
 import 'package:flutter/services.dart';
 import 'package:emh_scan/emh_scan.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 void main() {
   runApp(MyApp());
@@ -26,12 +27,28 @@ class _MyAppState extends State<MyApp> {
 
     _eventChannel.receiveBroadcastStream().listen((value) {
       print("获取到扫描头数据>>>>>>>>>>$value");
-
+      Fluttertoast.showToast(
+          msg: value,
+          toastLength: Toast.LENGTH_SHORT,
+          gravity: ToastGravity.CENTER,
+          timeInSecForIosWeb: 1,
+          backgroundColor: Colors.black54,
+          textColor: Colors.white,
+          fontSize: 16.0
+      );
     });
 
     _jy_eventChannel.receiveBroadcastStream().listen((value) {
       print("获取到京颐数据>>>>>>>>>>$value");
-
+      Fluttertoast.showToast(
+          msg: value,
+          toastLength: Toast.LENGTH_SHORT,
+          gravity: ToastGravity.CENTER,
+          timeInSecForIosWeb: 1,
+          backgroundColor: Colors.black54,
+          textColor: Colors.white,
+          fontSize: 16.0
+      );
     });
   }
 

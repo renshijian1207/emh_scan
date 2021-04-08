@@ -30,11 +30,13 @@ public class EmhScanPlugin implements FlutterPlugin, MethodCallHandler {
   /// This local reference serves to register the plugin with the Flutter Engine and unregister it
   /// when the Flutter Engine is detached from the Activity
   private MethodChannel channel;
-  private MethodChannel jy_channel;
-
   private EventChannel eventChannel;
+
+
+  private MethodChannel jy_channel;
   private EventChannel jy_eventChannel;
   private Context applicationContext;
+  private Context jy_applicationContext;
 
   //易迈海
   private static final String EMH_SCAN_ACTION = "com.ge.action.barscan";
@@ -47,6 +49,8 @@ public class EmhScanPlugin implements FlutterPlugin, MethodCallHandler {
 
   @Override
   public void onAttachedToEngine(@NonNull FlutterPluginBinding flutterPluginBinding) {
+
+
     channel = new MethodChannel(flutterPluginBinding.getBinaryMessenger(), "emh_scan");
     channel.setMethodCallHandler(this);
 
@@ -76,6 +80,8 @@ public class EmhScanPlugin implements FlutterPlugin, MethodCallHandler {
 
     jy_eventChannel = new EventChannel(flutterPluginBinding.getBinaryMessenger(), JY_CHARGING_CHANNEL);
     jy_eventChannel.setStreamHandler(new EventChannel.StreamHandler() {
+
+
       private BroadcastReceiver chargingStateChangeReceiver;
 
       @Override
@@ -83,19 +89,20 @@ public class EmhScanPlugin implements FlutterPlugin, MethodCallHandler {
         chargingStateChangeReceiver = createChargingStateChangeReceiver(events);
         IntentFilter filter = new IntentFilter();
         filter.addAction(JY_SCAN_ACTION);
-        applicationContext.registerReceiver(
+        jy_applicationContext.registerReceiver(
                 chargingStateChangeReceiver, filter);
       }
 
       @Override
       public void onCancel(Object arguments) {
-        applicationContext.unregisterReceiver(chargingStateChangeReceiver);
+        jy_applicationContext.unregisterReceiver(chargingStateChangeReceiver);
         chargingStateChangeReceiver = null;
       }
     });
 
 
     applicationContext = flutterPluginBinding.getApplicationContext();
+    jy_applicationContext = flutterPluginBinding.getApplicationContext();
   }
 
   public static void registerWith(Registrar registrar) {
@@ -130,7 +137,7 @@ public class EmhScanPlugin implements FlutterPlugin, MethodCallHandler {
         }
 
         if (content != null && !content.isEmpty()) {
-          events.success(content);
+          events.success(content+ "|" + staffid);
         }
 
 //        System.out.println("手机接收到广播数据>>>>>>>>>>>>>>>>>>>>>>>>>"+content+"----"+staffid);
