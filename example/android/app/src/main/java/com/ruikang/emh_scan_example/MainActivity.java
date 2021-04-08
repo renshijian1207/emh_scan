@@ -1,4 +1,4 @@
-package com.ruikang.emh_scan_example;
+package com.ruikang.closedloop;
 
 import io.flutter.embedding.android.FlutterActivity;
 

@@ -37,13 +37,13 @@ public class EmhScanPlugin implements FlutterPlugin, MethodCallHandler {
   private Context applicationContext;
 
   //易迈海
-//  private static final String EMH_SCAN_ACTION = "com.ge.action.barscan";
-  private static final String EMH_SCAN_ACTION = "com.kyee.action.scanner";
+  private static final String EMH_SCAN_ACTION = "com.ge.action.barscan";
+//  private static final String EMH_SCAN_ACTION = "com.kyee.action.scanner";
   private static final String CHARGING_CHANNEL = "emh_flutter";
 
   //京颐
-//  private static final String JY_SCAN_ACTION = "com.kyee.action.scanner";
-//  private static final String JY_CHARGING_CHANNEL = "jy_flutter";
+  private static final String JY_SCAN_ACTION = "com.kyee.action.scanner";
+  private static final String JY_CHARGING_CHANNEL = "jy_flutter";
 
   @Override
   public void onAttachedToEngine(@NonNull FlutterPluginBinding flutterPluginBinding) {
@@ -71,28 +71,28 @@ public class EmhScanPlugin implements FlutterPlugin, MethodCallHandler {
       }
     });
 
-//    jy_channel = new MethodChannel(flutterPluginBinding.getBinaryMessenger(), "jy_scan");
-//    jy_channel.setMethodCallHandler(this);
-//
-//    jy_eventChannel = new EventChannel(flutterPluginBinding.getBinaryMessenger(), JY_CHARGING_CHANNEL);
-//    jy_eventChannel.setStreamHandler(new EventChannel.StreamHandler() {
-//      private BroadcastReceiver chargingStateChangeReceiver;
-//
-//      @Override
-//      public void onListen(Object arguments, EventChannel.EventSink events) {
-//        chargingStateChangeReceiver = createChargingStateChangeReceiver(events);
-//        IntentFilter filter = new IntentFilter();
-//        filter.addAction(JY_SCAN_ACTION);
-//        applicationContext.registerReceiver(
-//                chargingStateChangeReceiver, filter);
-//      }
-//
-//      @Override
-//      public void onCancel(Object arguments) {
-//        applicationContext.unregisterReceiver(chargingStateChangeReceiver);
-//        chargingStateChangeReceiver = null;
-//      }
-//    });
+    jy_channel = new MethodChannel(flutterPluginBinding.getBinaryMessenger(), "jy_scan");
+    jy_channel.setMethodCallHandler(this);
+
+    jy_eventChannel = new EventChannel(flutterPluginBinding.getBinaryMessenger(), JY_CHARGING_CHANNEL);
+    jy_eventChannel.setStreamHandler(new EventChannel.StreamHandler() {
+      private BroadcastReceiver chargingStateChangeReceiver;
+
+      @Override
+      public void onListen(Object arguments, EventChannel.EventSink events) {
+        chargingStateChangeReceiver = createChargingStateChangeReceiver(events);
+        IntentFilter filter = new IntentFilter();
+        filter.addAction(JY_SCAN_ACTION);
+        applicationContext.registerReceiver(
+                chargingStateChangeReceiver, filter);
+      }
+
+      @Override
+      public void onCancel(Object arguments) {
+        applicationContext.unregisterReceiver(chargingStateChangeReceiver);
+        chargingStateChangeReceiver = null;
+      }
+    });
 
 
     applicationContext = flutterPluginBinding.getApplicationContext();
@@ -102,8 +102,8 @@ public class EmhScanPlugin implements FlutterPlugin, MethodCallHandler {
     final MethodChannel channel = new MethodChannel(registrar.messenger(), "emh_scan");
     channel.setMethodCallHandler(new EmhScanPlugin());
 
-//    final MethodChannel channel1 = new MethodChannel(registrar.messenger(), "jy_scan");
-//    channel1.setMethodCallHandler(new EmhScanPlugin());
+    final MethodChannel channel1 = new MethodChannel(registrar.messenger(), "jy_scan");
+    channel1.setMethodCallHandler(new EmhScanPlugin());
   }
 
 
@@ -133,7 +133,7 @@ public class EmhScanPlugin implements FlutterPlugin, MethodCallHandler {
           events.success(content);
         }
 
-        System.out.println("手机接收到广播数据>>>>>>>>>>>>>>>>>>>>>>>>>"+content+"----"+staffid);
+//        System.out.println("手机接收到广播数据>>>>>>>>>>>>>>>>>>>>>>>>>"+content+"----"+staffid);
       }
     };
   }
