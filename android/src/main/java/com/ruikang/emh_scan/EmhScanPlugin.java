@@ -122,10 +122,18 @@ public class EmhScanPlugin implements FlutterPlugin, MethodCallHandler {
       @Override
       public void onReceive(Context context, Intent intent) {
         String code = intent.getStringExtra("value");
+        String content = intent.getStringExtra("content");
+        String staffid = intent.getStringExtra("staffId");
         if (code != null && !code.isEmpty()) {
 //          System.out.println("手机接收到广播数据>>>>>>>>>>>>>>>>>>>>>>>>>"+code);
           events.success(code);
         }
+
+        if (content != null && !content.isEmpty()) {
+          events.success(content);
+        }
+
+        System.out.println("手机接收到广播数据>>>>>>>>>>>>>>>>>>>>>>>>>"+content+"----"+staffid);
       }
     };
   }
