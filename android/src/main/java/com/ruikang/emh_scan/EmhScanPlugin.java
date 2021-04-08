@@ -37,8 +37,8 @@ public class EmhScanPlugin implements FlutterPlugin, MethodCallHandler {
   private Context applicationContext;
 
   //易迈海
-//  private static final String EMH_SCAN_ACTION = "com.ge.action.barscan";
-  private static final String EMH_SCAN_ACTION = "com.kyee.action.scanner";
+  private static final String EMH_SCAN_ACTION = "com.ge.action.barscan";
+//  private static final String EMH_SCAN_ACTION = "com.kyee.action.scanner";
   private static final String CHARGING_CHANNEL = "emh_flutter";
 
   //京颐
