@@ -46,7 +46,7 @@ public class EmhScanPlugin implements FlutterPlugin, MethodCallHandler {
   private static final String JY_CHARGING_CHANNEL = "jy_flutter";
 
   //iData
-  private static final String iData_SCAN_ACTION = "com.kyee.action.scanner";
+  private static final String iData_SCAN_ACTION = "android.intent.action.SCANRESULT";
 
   @Override
   public void onAttachedToEngine(@NonNull FlutterPluginBinding flutterPluginBinding) {
