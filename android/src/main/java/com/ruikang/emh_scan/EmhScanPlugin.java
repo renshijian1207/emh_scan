@@ -45,6 +45,9 @@ public class EmhScanPlugin implements FlutterPlugin, MethodCallHandler {
   private static final String JY_SCAN_ACTION = "com.kyee.action.scanner";
   private static final String JY_CHARGING_CHANNEL = "jy_flutter";
 
+  //iData
+  private static final String iData_SCAN_ACTION = "com.kyee.action.scanner";
+
   @Override
   public void onAttachedToEngine(@NonNull FlutterPluginBinding flutterPluginBinding) {
 
@@ -62,6 +65,7 @@ public class EmhScanPlugin implements FlutterPlugin, MethodCallHandler {
         chargingStateChangeReceiver = createChargingStateChangeReceiver(events);
         IntentFilter filter = new IntentFilter();
         filter.addAction(EMH_SCAN_ACTION);
+        filter.addAction(iData_SCAN_ACTION);
         applicationContext.registerReceiver(
                 chargingStateChangeReceiver, filter);
       }
@@ -136,6 +140,7 @@ public class EmhScanPlugin implements FlutterPlugin, MethodCallHandler {
         }
 
         if (content != null && !content.isEmpty()) {
+
           events.success(content);
         }
 
