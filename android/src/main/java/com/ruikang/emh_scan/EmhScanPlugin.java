@@ -37,6 +37,10 @@ public class EmhScanPlugin implements FlutterPlugin, MethodCallHandler {
   private EventChannel jy_eventChannel;
   private Context jy_applicationContext;
 
+  private MethodChannel idata_channel;
+  private EventChannel idata_eventChannel;
+  private Context idata_applicationContext;
+
   //易迈海
   private static final String EMH_SCAN_ACTION = "com.ge.action.barscan";
   private static final String CHARGING_CHANNEL = "emh_flutter";
@@ -47,6 +51,7 @@ public class EmhScanPlugin implements FlutterPlugin, MethodCallHandler {
 
   //iData
   private static final String iData_SCAN_ACTION = "android.intent.action.SCANRESULT";
+  private static final String iData_CHARGING_CHANNEL = "idata_flutter";
 
   @Override
   public void onAttachedToEngine(@NonNull FlutterPluginBinding flutterPluginBinding) {
@@ -65,7 +70,6 @@ public class EmhScanPlugin implements FlutterPlugin, MethodCallHandler {
         chargingStateChangeReceiver = createChargingStateChangeReceiver(events);
         IntentFilter filter = new IntentFilter();
         filter.addAction(EMH_SCAN_ACTION);
-        filter.addAction(iData_SCAN_ACTION);
         applicationContext.registerReceiver(
                 chargingStateChangeReceiver, filter);
       }
@@ -103,8 +107,35 @@ public class EmhScanPlugin implements FlutterPlugin, MethodCallHandler {
     });
 
 
+    idata_channel = new MethodChannel(flutterPluginBinding.getBinaryMessenger(), "idata_scan");
+    idata_channel.setMethodCallHandler(this);
+
+    idata_eventChannel = new EventChannel(flutterPluginBinding.getBinaryMessenger(), iData_CHARGING_CHANNEL);
+    idata_eventChannel.setStreamHandler(new EventChannel.StreamHandler() {
+
+
+      private BroadcastReceiver chargingStateChangeReceiver2;
+
+      @Override
+      public void onListen(Object arguments, EventChannel.EventSink events) {
+        chargingStateChangeReceiver2 = createChargingStateChangeReceiver(events);
+        IntentFilter filter = new IntentFilter();
+        filter.addAction(iData_SCAN_ACTION);
+        idata_applicationContext.registerReceiver(
+                chargingStateChangeReceiver2, filter);
+      }
+
+      @Override
+      public void onCancel(Object arguments) {
+        idata_applicationContext.unregisterReceiver(chargingStateChangeReceiver2);
+        chargingStateChangeReceiver2 = null;
+      }
+    });
+
+
     applicationContext = flutterPluginBinding.getApplicationContext();
     jy_applicationContext = flutterPluginBinding.getApplicationContext();
+    idata_applicationContext = flutterPluginBinding.getApplicationContext();
   }
 
   public static void registerWith(Registrar registrar) {
@@ -113,6 +144,9 @@ public class EmhScanPlugin implements FlutterPlugin, MethodCallHandler {
 
     final MethodChannel channel1 = new MethodChannel(registrar.messenger(), "jy_scan");
     channel1.setMethodCallHandler(new EmhScanPlugin());
+
+    final MethodChannel channel2 = new MethodChannel(registrar.messenger(), "idata_scan");
+    channel2.setMethodCallHandler(new EmhScanPlugin());
   }
 
 
