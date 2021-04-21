@@ -159,6 +159,7 @@ public class EmhScanPlugin implements FlutterPlugin, MethodCallHandler {
   public void onDetachedFromEngine(@NonNull FlutterPluginBinding binding) {
     channel.setMethodCallHandler(null);
     jy_channel.setMethodCallHandler(null);
+    idata_channel.setMethodCallHandler(null);
   }
 
   private BroadcastReceiver createChargingStateChangeReceiver(final EventChannel.EventSink events) {
