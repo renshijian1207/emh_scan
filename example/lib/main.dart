@@ -22,6 +22,8 @@ class _MyAppState extends State<MyApp> {
 
   static const EventChannel _idata_eventChannel = EventChannel('idata_flutter');
 
+  static const EventChannel sl_eventChannel = EventChannel('sl_flutter');
+
   @override
   void initState() {
     super.initState();
@@ -37,6 +39,10 @@ class _MyAppState extends State<MyApp> {
     });
 
     _idata_eventChannel.receiveBroadcastStream().listen((value) {
+      print("获取到iData数据>>>>>>>>>>$value");
+    });
+
+    sl_eventChannel.receiveBroadcastStream().listen((value) {
       print("获取到iData数据>>>>>>>>>>$value");
     });
   }
