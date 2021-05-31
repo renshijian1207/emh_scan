@@ -45,6 +45,10 @@ public class EmhScanPlugin implements FlutterPlugin, MethodCallHandler {
   private EventChannel sl_eventChannel;
   private Context sl_applicationContext;
 
+  private MethodChannel xmg_channel;
+  private EventChannel xmg_eventChannel;
+  private Context xmg_applicationContext;
+
   //易迈海
   private static final String EMH_SCAN_ACTION = "com.ge.action.barscan";
   private static final String CHARGING_CHANNEL = "emh_flutter";
@@ -60,6 +64,10 @@ public class EmhScanPlugin implements FlutterPlugin, MethodCallHandler {
   //识凌
   private static final String sl_SCAN_ACTION = "SYSTEM_BAR_READ";
   private static final String sl_CHARGING_CHANNEL = "sl_flutter";
+
+  //东集小码哥
+  private static final String xmg_SCAN_ACTION = "com.android.server.scannerservice.broadcastJX";
+  private static final String xmg_CHARGING_CHANNEL = "xmg_flutter";
 
   @Override
   public void onAttachedToEngine(@NonNull FlutterPluginBinding flutterPluginBinding) {
@@ -165,11 +173,37 @@ public class EmhScanPlugin implements FlutterPlugin, MethodCallHandler {
       }
     });
 
+    xmg_channel = new MethodChannel(flutterPluginBinding.getBinaryMessenger(), "xmg_scan");
+    xmg_channel.setMethodCallHandler(this);
+
+    xmg_eventChannel = new EventChannel(flutterPluginBinding.getBinaryMessenger(), xmg_CHARGING_CHANNEL);
+    xmg_eventChannel.setStreamHandler(new EventChannel.StreamHandler() {
+
+
+      private BroadcastReceiver chargingStateChangeReceiver4;
+
+      @Override
+      public void onListen(Object arguments, EventChannel.EventSink events) {
+        chargingStateChangeReceiver4 = createChargingStateChangeReceiver(events);
+        IntentFilter filter = new IntentFilter();
+        filter.addAction(xmg_SCAN_ACTION);
+        idata_applicationContext.registerReceiver(
+                chargingStateChangeReceiver4, filter);
+      }
+
+      @Override
+      public void onCancel(Object arguments) {
+        idata_applicationContext.unregisterReceiver(chargingStateChangeReceiver4);
+        chargingStateChangeReceiver4 = null;
+      }
+    });
+
 
     applicationContext = flutterPluginBinding.getApplicationContext();
     jy_applicationContext = flutterPluginBinding.getApplicationContext();
     idata_applicationContext = flutterPluginBinding.getApplicationContext();
     sl_applicationContext = flutterPluginBinding.getApplicationContext();
+    xmg_applicationContext = flutterPluginBinding.getApplicationContext();
   }
 
   public static void registerWith(Registrar registrar) {
@@ -184,6 +218,9 @@ public class EmhScanPlugin implements FlutterPlugin, MethodCallHandler {
 
     final MethodChannel channel3 = new MethodChannel(registrar.messenger(), "sl_scan");
     channel3.setMethodCallHandler(new EmhScanPlugin());
+
+    final MethodChannel channel4 = new MethodChannel(registrar.messenger(), "xmg_scan");
+    channel4.setMethodCallHandler(new EmhScanPlugin());
   }
 
 
@@ -198,6 +235,7 @@ public class EmhScanPlugin implements FlutterPlugin, MethodCallHandler {
     jy_channel.setMethodCallHandler(null);
     idata_channel.setMethodCallHandler(null);
     sl_channel.setMethodCallHandler(null);
+    xmg_channel.setMethodCallHandler(null);
   }
 
   private BroadcastReceiver createChargingStateChangeReceiver(final EventChannel.EventSink events) {
@@ -207,6 +245,7 @@ public class EmhScanPlugin implements FlutterPlugin, MethodCallHandler {
         String code = intent.getStringExtra("value");
         String content = intent.getStringExtra("content");
         String sl = intent.getStringExtra("BAR_VALUE");
+        String xmg = intent.getStringExtra("scannerdata");
         if (code != null && !code.isEmpty()) {
 //          System.out.println("手机接收到广播数据>>>>>>>>>>>>>>>>>>>>>>>>>"+code);
           events.success(code);
@@ -219,6 +258,10 @@ public class EmhScanPlugin implements FlutterPlugin, MethodCallHandler {
 
         if(sl != null && !sl.isEmpty()) {
           events.success(sl);
+        }
+
+        if(xmg != null && !xmg.isEmpty()) {
+          events.success(xmg);
         }
 
 //        System.out.println("手机接收到广播数据>>>>>>>>>>>>>>>>>>>>>>>>>"+content+"----"+staffid);

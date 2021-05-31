@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="326ab6ae-8a69-4bf5-b94b-b09551f52d4a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/emh_scan/.idea/runConfigurations.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/src/main/java/com/ruikang/emh_scan/EmhScanPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/ruikang/emh_scan/EmhScanPlugin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/emh_scan/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/emh_scan/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/emh_scan/android/src/main/java/com/ruikang/emh_scan/EmhScanPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/emh_scan/android/src/main/java/com/ruikang/emh_scan/EmhScanPlugin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -12,7 +18,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[527a0df]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[SerialNumber@4b7bee54]" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -28,6 +34,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
@@ -41,6 +48,7 @@
       <method v="2" />
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -62,9 +70,10 @@
       <screen x="1440" y="25" width="2560" height="1415" />
     </state>
     <state x="2507" y="522" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1440.800/1440.25.2560.1415@1440.25.2560.1415" timestamp="1617871757856" />
-    <state width="1397" height="272" key="GridCell.Tab.0.bottom" timestamp="1619418733573">
-      <screen x="0" y="25" width="1440" height="793" />
+    <state width="1570" height="366" key="GridCell.Tab.0.bottom" timestamp="1622450154874">
+      <screen x="1440" y="25" width="1920" height="1055" />
     </state>
+    <state width="1570" height="366" key="GridCell.Tab.0.bottom/0.25.1440.793/1440.25.1920.1055@1440.25.1920.1055" timestamp="1622450154874" />
     <state width="1397" height="272" key="GridCell.Tab.0.bottom/0.25.1440.793/1440.25.2560.1415@0.25.1440.793" timestamp="1619418733573" />
     <state width="2037" height="406" key="GridCell.Tab.0.bottom/0.25.1440.793/1440.25.2560.1415@1440.25.2560.1415" timestamp="1617842508885" />
     <state width="1956" height="346" key="GridCell.Tab.0.bottom/0.25.1440.796/1440.25.2560.1415@1440.25.2560.1415" timestamp="1618990412068" />
@@ -72,9 +81,10 @@
     <state width="1956" height="346" key="GridCell.Tab.0.bottom/0.25.1440.798/1440.25.2560.1415@1440.25.2560.1415" timestamp="1618991942340" />
     <state width="1908" height="332" key="GridCell.Tab.0.bottom/0.25.1440.800/1440.25.2560.1415@1440.25.2560.1415" timestamp="1617873668029" />
     <state width="2037" height="406" key="GridCell.Tab.0.bottom/0.25.1440.803/1440.25.2560.1415@1440.25.2560.1415" timestamp="1615194654428" />
-    <state width="1397" height="272" key="GridCell.Tab.0.center" timestamp="1619418733572">
-      <screen x="0" y="25" width="1440" height="793" />
+    <state width="1570" height="366" key="GridCell.Tab.0.center" timestamp="1622450154874">
+      <screen x="1440" y="25" width="1920" height="1055" />
     </state>
+    <state width="1570" height="366" key="GridCell.Tab.0.center/0.25.1440.793/1440.25.1920.1055@1440.25.1920.1055" timestamp="1622450154874" />
     <state width="1397" height="272" key="GridCell.Tab.0.center/0.25.1440.793/1440.25.2560.1415@0.25.1440.793" timestamp="1619418733572" />
     <state width="2037" height="406" key="GridCell.Tab.0.center/0.25.1440.793/1440.25.2560.1415@1440.25.2560.1415" timestamp="1617842508885" />
     <state width="1956" height="346" key="GridCell.Tab.0.center/0.25.1440.796/1440.25.2560.1415@1440.25.2560.1415" timestamp="1618990412067" />
@@ -82,9 +92,10 @@
     <state width="1956" height="346" key="GridCell.Tab.0.center/0.25.1440.798/1440.25.2560.1415@1440.25.2560.1415" timestamp="1618991942339" />
     <state width="1908" height="332" key="GridCell.Tab.0.center/0.25.1440.800/1440.25.2560.1415@1440.25.2560.1415" timestamp="1617873668029" />
     <state width="2037" height="406" key="GridCell.Tab.0.center/0.25.1440.803/1440.25.2560.1415@1440.25.2560.1415" timestamp="1615194654428" />
-    <state width="1397" height="272" key="GridCell.Tab.0.left" timestamp="1619418733572">
-      <screen x="0" y="25" width="1440" height="793" />
+    <state width="1570" height="366" key="GridCell.Tab.0.left" timestamp="1622450154873">
+      <screen x="1440" y="25" width="1920" height="1055" />
     </state>
+    <state width="1570" height="366" key="GridCell.Tab.0.left/0.25.1440.793/1440.25.1920.1055@1440.25.1920.1055" timestamp="1622450154873" />
     <state width="1397" height="272" key="GridCell.Tab.0.left/0.25.1440.793/1440.25.2560.1415@0.25.1440.793" timestamp="1619418733572" />
     <state width="2037" height="406" key="GridCell.Tab.0.left/0.25.1440.793/1440.25.2560.1415@1440.25.2560.1415" timestamp="1617842508884" />
     <state width="1956" height="346" key="GridCell.Tab.0.left/0.25.1440.796/1440.25.2560.1415@1440.25.2560.1415" timestamp="1618990412066" />
@@ -92,9 +103,10 @@
     <state width="1956" height="346" key="GridCell.Tab.0.left/0.25.1440.798/1440.25.2560.1415@1440.25.2560.1415" timestamp="1618991942339" />
     <state width="1908" height="332" key="GridCell.Tab.0.left/0.25.1440.800/1440.25.2560.1415@1440.25.2560.1415" timestamp="1617873668029" />
     <state width="2037" height="406" key="GridCell.Tab.0.left/0.25.1440.803/1440.25.2560.1415@1440.25.2560.1415" timestamp="1615194654427" />
-    <state width="1397" height="272" key="GridCell.Tab.0.right" timestamp="1619418733572">
-      <screen x="0" y="25" width="1440" height="793" />
+    <state width="1570" height="366" key="GridCell.Tab.0.right" timestamp="1622450154874">
+      <screen x="1440" y="25" width="1920" height="1055" />
     </state>
+    <state width="1570" height="366" key="GridCell.Tab.0.right/0.25.1440.793/1440.25.1920.1055@1440.25.1920.1055" timestamp="1622450154874" />
     <state width="1397" height="272" key="GridCell.Tab.0.right/0.25.1440.793/1440.25.2560.1415@0.25.1440.793" timestamp="1619418733572" />
     <state width="2037" height="406" key="GridCell.Tab.0.right/0.25.1440.793/1440.25.2560.1415@1440.25.2560.1415" timestamp="1617842508885" />
     <state width="1956" height="346" key="GridCell.Tab.0.right/0.25.1440.796/1440.25.2560.1415@1440.25.2560.1415" timestamp="1618990412067" />
@@ -116,9 +128,10 @@
     <state x="2713" y="487" width="615" height="490" key="find.popup/0.25.1440.796/1440.25.2560.1415@1440.25.2560.1415" timestamp="1617694941673" />
     <state x="406" y="270" width="601" height="490" key="find.popup/0.25.1440.798/1440.25.2560.1415@0.25.1440.798" timestamp="1617846252523" />
     <state x="2528" y="328" width="1069" height="869" key="find.popup/0.25.1440.798/1440.25.2560.1415@1440.25.2560.1415" timestamp="1617853302564" />
-    <state x="292" y="142" width="670" height="676" key="search.everywhere.popup" timestamp="1619417728843">
-      <screen x="0" y="25" width="1440" height="793" />
+    <state x="1829" y="181" width="894" height="900" key="search.everywhere.popup" timestamp="1622449205272">
+      <screen x="1440" y="25" width="1920" height="1055" />
     </state>
     <state x="292" y="142" width="670" height="676" key="search.everywhere.popup/0.25.1440.793/1440.25.2560.1415@0.25.1440.793" timestamp="1619417728843" />
+    <state x="1829" y="181" width="894" height="900" key="search.everywhere.popup/0.25.1440.796/1440.25.1920.1055@1440.25.1920.1055" timestamp="1622449205272" />
   </component>
 </project>
