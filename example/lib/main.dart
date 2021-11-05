@@ -26,6 +26,8 @@ class _MyAppState extends State<MyApp> {
 
   static const EventChannel xmg_eventChannel = EventChannel('xmg_flutter');
 
+  static const EventChannel lx_eventChannel = EventChannel('lx_flutter');
+
   @override
   void initState() {
     super.initState();
@@ -50,6 +52,10 @@ class _MyAppState extends State<MyApp> {
 
     xmg_eventChannel.receiveBroadcastStream().listen((value) {
       print("获取到xmg数据>>>>>>>>>>$value");
+    });
+
+    lx_eventChannel.receiveBroadcastStream().listen((value) {
+      print("获取到lx数据>>>>>>>>>>$value");
     });
   }
 

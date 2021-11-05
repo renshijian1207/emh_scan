@@ -49,6 +49,10 @@ public class EmhScanPlugin implements FlutterPlugin, MethodCallHandler {
   private EventChannel xmg_eventChannel;
   private Context xmg_applicationContext;
 
+  private MethodChannel lx_channel;
+  private EventChannel lx_eventChannel;
+  private Context lx_applicationContext;
+
   //易迈海
   private static final String EMH_SCAN_ACTION = "com.ge.action.barscan";
   private static final String CHARGING_CHANNEL = "emh_flutter";
@@ -68,6 +72,10 @@ public class EmhScanPlugin implements FlutterPlugin, MethodCallHandler {
   //东集小码哥
   private static final String xmg_SCAN_ACTION = "com.android.server.scannerservice.broadcastJX";
   private static final String xmg_CHARGING_CHANNEL = "xmg_flutter";
+
+  //联新
+  private static final String lx_SCAN_ACTION = "lachesis_barcode_value_notice_broadcast";
+  private static final String lx_CHARGING_CHANNEL = "lx_flutter";
 
   @Override
   public void onAttachedToEngine(@NonNull FlutterPluginBinding flutterPluginBinding) {
@@ -199,11 +207,39 @@ public class EmhScanPlugin implements FlutterPlugin, MethodCallHandler {
     });
 
 
+
+    lx_channel = new MethodChannel(flutterPluginBinding.getBinaryMessenger(), "lx_scan");
+    lx_channel.setMethodCallHandler(this);
+
+    lx_eventChannel = new EventChannel(flutterPluginBinding.getBinaryMessenger(), lx_CHARGING_CHANNEL);
+    lx_eventChannel.setStreamHandler(new EventChannel.StreamHandler() {
+
+
+      private BroadcastReceiver chargingStateChangeReceiver5;
+
+      @Override
+      public void onListen(Object arguments, EventChannel.EventSink events) {
+        chargingStateChangeReceiver5 = createChargingStateChangeReceiver(events);
+        IntentFilter filter = new IntentFilter();
+        filter.addAction(lx_SCAN_ACTION);
+        lx_applicationContext.registerReceiver(
+                chargingStateChangeReceiver5, filter);
+      }
+
+      @Override
+      public void onCancel(Object arguments) {
+        lx_applicationContext.unregisterReceiver(chargingStateChangeReceiver5);
+        chargingStateChangeReceiver5 = null;
+      }
+    });
+
+
     applicationContext = flutterPluginBinding.getApplicationContext();
     jy_applicationContext = flutterPluginBinding.getApplicationContext();
     idata_applicationContext = flutterPluginBinding.getApplicationContext();
     sl_applicationContext = flutterPluginBinding.getApplicationContext();
     xmg_applicationContext = flutterPluginBinding.getApplicationContext();
+    lx_applicationContext = flutterPluginBinding.getApplicationContext();
   }
 
   public static void registerWith(Registrar registrar) {
@@ -221,6 +257,9 @@ public class EmhScanPlugin implements FlutterPlugin, MethodCallHandler {
 
     final MethodChannel channel4 = new MethodChannel(registrar.messenger(), "xmg_scan");
     channel4.setMethodCallHandler(new EmhScanPlugin());
+
+    final MethodChannel channel5 = new MethodChannel(registrar.messenger(), "lx_scan");
+    channel5.setMethodCallHandler(new EmhScanPlugin());
   }
 
 
@@ -236,6 +275,7 @@ public class EmhScanPlugin implements FlutterPlugin, MethodCallHandler {
     idata_channel.setMethodCallHandler(null);
     sl_channel.setMethodCallHandler(null);
     xmg_channel.setMethodCallHandler(null);
+    lx_channel.setMethodCallHandler(null);
   }
 
   private BroadcastReceiver createChargingStateChangeReceiver(final EventChannel.EventSink events) {
@@ -246,6 +286,7 @@ public class EmhScanPlugin implements FlutterPlugin, MethodCallHandler {
         String content = intent.getStringExtra("content");
         String sl = intent.getStringExtra("BAR_VALUE");
         String xmg = intent.getStringExtra("scannerdata");
+        String lx = intent.getStringExtra("lachesis_barcode_value_notice_broadcast_data_string");
         if (code != null && !code.isEmpty()) {
 //          System.out.println("手机接收到广播数据>>>>>>>>>>>>>>>>>>>>>>>>>"+code);
           events.success(code);
@@ -262,6 +303,10 @@ public class EmhScanPlugin implements FlutterPlugin, MethodCallHandler {
 
         if(xmg != null && !xmg.isEmpty()) {
           events.success(xmg);
+        }
+
+        if(lx != null && !lx.isEmpty()) {
+          events.success(lx);
         }
 
 //        System.out.println("手机接收到广播数据>>>>>>>>>>>>>>>>>>>>>>>>>"+content+"----"+staffid);
